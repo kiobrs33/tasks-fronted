@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Proyecto DEMO de tareas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hecho por Rene Lozano Ramos
 
-## Available Scripts
+# Descripcion del proyecto
+Es un proyecto CRUD de tareas
 
-In the project directory, you can run:
+Tecnologias usadas para el fronted
+    React Js
+    Axios
+    UseContext
+    UseReducer
+    Estilos con SASS y metodologia BEM
+    Iconos se Fontawesome
 
+Tecnologias para BACKED
+    Java
+    Spring Boot
+    Para la manipulacion de datos RELACIONES se uso JPA(Java Persistence API)
+    Para la comunucacion con base de datos se uso controlador MYSQL
+    MySQL como base de datos
+
+
+# FRONTEND
+Para la conexion con la API sebe condigurar el archivo ".ENV.DEVELOPMENT", se encuentra en la raiz del proyecto ReactJs
+
+Para instalar las modulos de la App ejecute
+## `npm install`
+
+Para ejecutar el proyecto ejecute el siguiente comando
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# BACKEND
+Para la comunicacion correcta con la API, se debe configurar CORS en el archivo src/main/java/com/example/demo/DemoApplications
+Debera escribir la URL que se podra conectar a la API
 
-### `npm test`
+Para el BACKEND, si desea conectarse a la base de datos de su equipo debe configurar el archivo APPLICATION PROPERTIES en la carpeta src/main/resources
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La base de datos ya debera estar creada y cambiar los siguiente datos
+cambiar por el suyo
+url = 127.0.0.1:3306/testbd
 
-### `npm run build`
+spring.datasource.url=jdbc:mysql://127.0.0.1:3306/testbd
+spring.datasource.username=root
+spring.datasource.password=123456
+spring.jpa.hibernate.ddl-auto=update
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Para ejecutar el api
+## `mvnw.cmd spring-boot:run`

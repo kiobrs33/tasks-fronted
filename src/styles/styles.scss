@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: #1C2A37;
+    font-family: sans-serif;
+    color: #C6C7CC;
+}
+
+.container {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.container > div {
+    // border: 1.5px solid #C6C7CC;
+    // border-radius: 5px;
+    min-width: 300px;
+    padding: 10px;
+}
+
+.title {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+// Formulario
+.form{
+    display: flex;
+    padding: 10px  0;
+}
+
+.item1 {
+    flex-grow: 4;
+    margin-right: 10px;
+}
+
+.item2 {
+    flex-grow: 1;  
+}
+
+.form__input {
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: none;
+    background: #141E27;
+    border: 1px solid #2A8FD6;
+    color: #fff;
+    font-size: 14px;
+    padding: 7px 7px;
+    width: 100%;
+}
+
+.form__input:focus {
+    outline: none;
+    border: 1px solid #6AB8F7;
+}
+
+.form__button {
+    background: #2A8FD6;
+    border: none;
+    border-radius: 3px;
+    color: #ddd;
+    font-size: 14px;
+    height: 100%;
+    width: 100%;
+    padding: 0 5px;
+    transition: .3s;
+}
+
+.form__button:hover {
+    background: #46A6F4;
+    color: #fff;
+}
+
+//Items Task
+.task {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+.task__check {
+    font-size: 14;
+}
+
+.task__description {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.task__description__text {
+    font-size: 14px;
+}
+
+.task__description__input {
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: none;
+    background: #141E27;
+    border: 1px solid #2A8FD6;
+    color: #fff;
+    font-size: 14px;
+    padding: 4px 4px;
+    width: 100%;
+}
+
+.task__description__input:focus {
+    outline: none;
+    border: 1px solid #6AB8F7;
+}
+
+.task__button-edit {
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 14px;
+    padding: 7px;
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.task__button-edit > i{
+    color: #fff;
+}
+
+.task__button-delete {
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 7px;
+    transition: .3s;
+}
+
+.task__button-delete > i{
+    color: #fff;
+}
+
+
+//Modal
+
+.modal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.disabled {
+    display:none;
+}
+
+.modal {
+    background: #1C2A37;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+    min-width: 320px;
+    z-index: 100;
+}
+
+.modal__title {
+    font-size: 15px;
+    color: #fff;
+}
+
+.modal__content {
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.modal__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__buttons__cancelar {
+    
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    color: #aaa;
+    font-size: 12px;
+    padding: 5px;
+    transition: .3s;
+}
+
+.modal__buttons__aceptar {
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    color: #aaa;
+    font-size: 12px;
+    padding: 5px;
+    transition: .3s;
+}
+
+.modal__buttons__cancelar:hover {
+    color: #fff;
+}
+
+.modal__buttons__aceptar:hover {
+    color: #fff;
+}
